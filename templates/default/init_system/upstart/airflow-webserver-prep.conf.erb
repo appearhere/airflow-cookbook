@@ -1,0 +1,9 @@
+start on starting airflow-webserver
+
+task
+
+script
+  echo "[`date`] Airflow webserver prepping..."
+  mkdir -p -m 0755 <%= @run_path %>
+  chown <%= @user %>:<%= @group %> <%= @run_path %>
+end script
