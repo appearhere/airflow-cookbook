@@ -20,6 +20,7 @@ default["airflow"]["user_uid"] = 9999
 default["airflow"]["group_gid"] = 9999
 default["airflow"]["user_home_directory"] = "/home/#{node["airflow"]["user"]}"
 default["airflow"]["shell"] = "/bin/bash"
+default["airflow"]["locale"] = "en_US.UTF-8"
 
 # General config
 default["airflow"]["directories_mode"] = "0775"

@@ -17,6 +17,7 @@ author      "Sergey Bahchissaraitsev http://www.bahchis.com"
 
 setuid <%= @user %>
 setgid <%= @group %>
+env LANG=<%= @locale %>
 
 start on started networking or runlevel [2345]
 stop on stopped networking or runlevel [016]

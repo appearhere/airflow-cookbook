@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if (node["airflow"]["init_system"] == "upstart") 
+if (node["airflow"]["init_system"] == "upstart")
   service_target = "/etc/init/airflow-scheduler.conf"
   service_template = "init_system/upstart/airflow-scheduler.conf.erb"
 else
@@ -26,8 +26,9 @@ template service_target do
   group "root"
   mode "0644"
   variables({
-    :user => node["airflow"]["user"], 
+    :user => node["airflow"]["user"],
     :group => node["airflow"]["group"],
+    :locale => node["airflow"]["locale"],
     :run_path => node["airflow"]["run_path"],
     :bin_path => node["airflow"]["bin_path"]
   })

@@ -44,6 +44,7 @@ template service_target do
   variables({
     :user => node["airflow"]["user"],
     :group => node["airflow"]["group"],
+    :locale => node["airflow"]["locale"],
     :run_path => node["airflow"]["run_path"],
     :bin_path => node["airflow"]["bin_path"]
   })
